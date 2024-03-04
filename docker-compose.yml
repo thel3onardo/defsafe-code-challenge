@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  nuxt:
+    build: 
+      context: .
+    image: defsafe_nuxt
+    container_name: defsafe_nuxt
+    command: pnpm run preview
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
