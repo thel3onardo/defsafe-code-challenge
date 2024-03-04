@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxtjs/tailwindcss",
     "@nuxt/image",
+    "@pinia/nuxt",
   ],
 
   devtools: { enabled: true },
@@ -32,12 +33,12 @@ export default defineNuxtConfig({
     preload: true,
   },
 
-  // typescript: {
-  //   strict: true,
-  // },
+  typescript: {
+    strict: true,
+    builder: "vite",
+  },
 
-  // routeRules: {
-  //   "/": { prerender: true },
-  //   // "/api/cats/*": { cache: { maxAge: 60 * 60 } },
-  // },
+  routeRules: {
+    "/": { prerender: true },
+  },
 });

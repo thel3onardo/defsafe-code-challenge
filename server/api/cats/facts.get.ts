@@ -1,24 +1,18 @@
-export default defineEventHandler(() => {
-  // try {
-  //   const data = await $fetch(
-  //     "https://meqwdqowfacts.herokuapp.com/?count=2000000000",
-  //     { method: "get", cache: "no-cache" },
-  //   );
+import { cachedCatFacts } from "~/server/services/fetch-facts";
+import { generateRandomNumber } from "~/utils";
 
-  //   setResponseStatus(event, 200);
+export default defineEventHandler(async (event) => {
+  const { error, data: facts } = await cachedCatFacts();
 
-  //   return {
-  //     facts: data,
-  //   };
-  // } catch (err) {
-  //   setResponseStatus(event, 500);
+  if (error) {
+    setResponseStatus(event, 500);
+    return sendError(event, error);
+  }
 
-  //   return {
-  //     error: err,
-  //   };
-  // }
+  setResponseStatus(event, 200);
 
   return {
-    hello: "world",
+    facts: facts?.data,
+    currentFact: facts?.data[generateRandomNumber()],
   };
 });
