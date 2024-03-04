@@ -1,5 +1,5 @@
-import defaultTheme from "tailwindcss/defaultTheme";
-import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme"; //eslint-disable-line
+import type { Config } from "tailwindcss"; //eslint-disable-line
 
 export default <Partial<Config>>{
   content: [
@@ -22,7 +22,7 @@ export default <Partial<Config>>{
         light: "#F2E9E4",
       },
       fontFamily: {
-        sans: ["Jost", ...defaultTheme.fontFamily.sans],
+        sans: ["Jost"],
       },
     },
   },
