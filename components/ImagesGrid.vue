@@ -7,12 +7,14 @@ const catImages = [
 </script>
 
 <template>
-  <div class="grid grid-cols-[400px_150px] grid-rows-2 gap-8 max-h-[450px]">
+  <div
+    class="grid grid-cols-2 grid-rows-[400px_200px] md:grid-cols-[400px_150px] md:grid-rows-2 gap-8 lg:max-h-[450px]"
+  >
     <div
       v-for="(image, index) in catImages"
       :key="image.id"
       class="rounded-2xl overflow-hidden"
-      :class="{ 'row-span-2': index === 0 }"
+      :class="{ 'col-span-2 md:row-span-2 md:col-span-1': index === 0 }"
     >
       <NuxtImg
         class="h-full w-full object-cover"

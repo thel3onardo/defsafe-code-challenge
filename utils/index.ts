@@ -1,3 +1,3 @@
 export const generateRandomNumber = () => {
-  return Math.round(Math.random() * 90);
+  return Math.round(Math.random() * 89);
 };

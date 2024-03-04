@@ -6,24 +6,27 @@ type APIResponse = {
 
 const factsStore = useFactsStore();
 
-const { pending } = await useLazyFetch<APIResponse>("/api/cats/facts", {
-  onResponse({ response }) {
-    factsStore.setCurrent(response._data.currentFact);
-    factsStore.setList(response._data.facts);
+const { pending, error, refresh } = await useLazyFetch<APIResponse>(
+  "/api/cats/fact",
+  {
+    onResponse({ response }) {
+      factsStore.setCurrent(response._data.fact);
+    },
   },
-});
+);
 </script>
 
 <template>
-  <div v-if="pending">
-    <p>pending</p>
-  </div>
-  <div v-else class="min-h-screen w-full bg-surface">
+  <div class="min-h-screen w-full bg-surface">
     <Header />
     <main
-      class="flex items-center gap-x-12 justify-between mt-6 max-w-[1000px] w-full mx-auto"
+      class="flex flex-col px-6 lg:px-4 lg:flex-row items-center gap-x-12 justify-between py-6 max-w-[1000px] w-full mx-auto"
     >
-      <CatFactContainer />
+      <CatFactContainer
+        class="mb-8 lg:mb-0"
+        :refresh-fn="refresh"
+        :loading="pending"
+      />
       <ImagesGrid />
     </main>
   </div>

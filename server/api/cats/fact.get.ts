@@ -6,13 +6,13 @@ export default defineEventHandler(async (event) => {
 
   if (error) {
     setResponseStatus(event, 500);
+
     return sendError(event, error);
   }
 
   setResponseStatus(event, 200);
 
   return {
-    facts: facts?.data,
-    currentFact: facts?.data[generateRandomNumber()],
+    fact: facts?.data[generateRandomNumber()],
   };
 });
