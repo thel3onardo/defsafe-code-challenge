@@ -7,7 +7,6 @@ export const cachedCatFacts = defineCachedFunction(
     data: null | APIResponse;
     error: null | Error;
   }> => {
-    console.log("cachedCatFacts executed");
     try {
       const data: APIResponse = await $fetch(
         "https://meowfacts.herokuapp.com/?count=2000000000",

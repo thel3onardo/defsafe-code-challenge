@@ -1,4 +1,4 @@
-import { cachedCatFacts } from "~/server/services/fetch-facts";
+import { cachedCatFacts } from "~/server/services/fetch-cat-facts";
 import { generateRandomNumber } from "~/utils";
 
 export default defineEventHandler(async (event) => {
