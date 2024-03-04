@@ -9,7 +9,7 @@ defineProps<{ refreshFn: Function; loading: boolean }>();
     <h2 class="uppercase text-primary-dark text-2xl font-semibold">
       cat fact:
     </h2>
-    <div class="my-12 text-primary-light font-medium md:px-12 lg:px-0">
+    <div class="my-12 text-primary-light font-medium sm:px-8 md:px-12 lg:px-0">
       <Transition mode="out-in">
         <p v-if="loading">Loading new fact...</p>
         <p v-else>
