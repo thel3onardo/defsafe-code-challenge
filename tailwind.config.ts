@@ -1,5 +1,7 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+import type { Config } from 'tailwindcss'
+import defaultTheme from 'tailwindcss/defaultTheme'
+
+export default <Partial<Config>> {
   content: [],
   theme: {
     extend: {
@@ -11,6 +13,9 @@ export default {
         secondary:'#9A8C98',
         surface: '#C9ADA7',
         light: '#F2E9E4'
+      },
+      fontFamily: {
+        sans: ['Jost', ...defaultTheme.fontFamily.sans]
       }
     },
   },

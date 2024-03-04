@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
 
   devtools: { enabled: true },
 
@@ -9,5 +9,11 @@ export default defineNuxtConfig({
     configPath: 'tailwind.config',
     //TODO: set viewer to false in production
     viewer: true
+  },
+
+  googleFonts: {
+    families: {
+      Jost: true
+    }
   }
 })
