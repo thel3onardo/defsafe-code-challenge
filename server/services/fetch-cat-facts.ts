@@ -16,7 +16,6 @@ export const cachedCatFacts = defineCachedFunction(
 
       return { data, error: null };
     } catch (error) {
-      // TODO: improve this type
       return { error: error as Error, data: null };
     }
   },

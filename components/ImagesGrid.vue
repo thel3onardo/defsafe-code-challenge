@@ -8,7 +8,7 @@ const catImages = [
 
 <template>
   <div
-    class="grid grid-cols-2 grid-rows-[400px_200px] md:grid-cols-[400px_150px] md:grid-rows-2 gap-8 lg:max-h-[450px]"
+    class="grid grid-cols-2 grid-rows-[400px_200px] md:grid-cols-[400px_150px] md:grid-rows-2 gap-6 lg:max-h-[450px]"
   >
     <div
       v-for="(image, index) in catImages"
@@ -20,6 +20,9 @@ const catImages = [
         class="h-full w-full object-cover"
         :src="image.imagePath"
         :alt="image.alt"
+        :quality="100"
+        placeholder
+        preload
       />
     </div>
   </div>
