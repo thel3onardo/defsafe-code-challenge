@@ -10,6 +10,8 @@ The project's goal is to build a simple application that displays cat facts. It 
 
 For caching the API requests, I took advantage of the Nitro's built-in cache alongisde Nuxt server routes. For unit testing, I used the official nuxt-test-utils library alongside Vitest, as a test runner.
 
+For images optimizations and caching, I used the module @nuxt/image, which helped me a lot.
+
 
 ## Running the project
 
