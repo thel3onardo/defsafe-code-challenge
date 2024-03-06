@@ -13,5 +13,3 @@ RUN pnpm install && pnpm store prune
 COPY . .
 
 RUN pnpm run build
-
-CMD [ "pnpm", "run", "start" ]

@@ -61,7 +61,8 @@ const { pending, error, refresh } = await useLazyFetch<APIResponse>(
           <div class="flex justify-center lg:justify-start">
             <Button
               data-testid="content-refetch-button"
-              aria-valuetext="Get a random cat fact"
+              role="button"
+              aria-label="Get a random cat fact"
               icon="ic:baseline-refresh"
               class="font-bold"
               @click="refresh"

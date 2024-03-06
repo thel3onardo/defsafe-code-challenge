@@ -5,6 +5,7 @@ services:
     build: 
       context: .
     image: defsafe_nuxt
+    restart: always
     container_name: defsafe_nuxt
     command: pnpm run preview
     volumes:
@@ -12,3 +13,4 @@ services:
       - /app/node_modules
     ports:
       - "3000:3000"
+      - "3001:3001"
