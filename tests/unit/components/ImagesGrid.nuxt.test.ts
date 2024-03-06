@@ -9,8 +9,21 @@ describe("ImagesGrid to render", async () => {
     expect(component.exists()).toBe(true);
   });
 
-  test("three cat images", () => {
-    // TODO
-    expect(1 + 1).toBe(2);
+  test("three cat images with valid src and alt values", () => {
+    const firstImage = component.get("[data-testid='images-cat-1']");
+    const secondImage = component.get("[data-testid='images-cat-2']");
+    const thirdImage = component.get("[data-testid='images-cat-3']");
+
+    expect(firstImage.isVisible()).toBe(true);
+    expect(secondImage.isVisible()).toBe(true);
+    expect(thirdImage.isVisible()).toBe(true);
+
+    expect(firstImage.attributes().src).toMatch("cat1.jpeg");
+    expect(secondImage.attributes().src).toMatch("cat2.jpeg");
+    expect(thirdImage.attributes().src).toMatch("cat3.jpeg");
+
+    expect(firstImage.attributes().alt).toBe("Just a cat");
+    expect(secondImage.attributes().alt).toBe("Another cute cat");
+    expect(thirdImage.attributes().alt).toBe("Just another cute cat");
   });
 });

@@ -1,6 +1,6 @@
 # DefSafe Code Challenge
 
-![Cover image](https://github.com/thel3onardo/defsafe-code-challenge/blob/main/public/readme-image-2.jpg?raw=true)
+![Cover image](https://github.com/thel3onardo/defsafe-code-challenge/blob/main/public/readme-image.png?raw=true)
 
 Front-end code challenge built with Nuxt3, TailwindCSS and Vitest.
 
@@ -8,7 +8,7 @@ Front-end code challenge built with Nuxt3, TailwindCSS and Vitest.
 ## Goal
 The project's goal is to build a simple application that displays cat facts. It was requested the use of the public <a href="">Cats API</a>, <a href="">Nuxt</a> as a meta framework and <a href="">TailwindCSS</a> as a styling engine.
 
-For caching the API requests, I took advantage of the Nitro's built-in cache alongisde Nuxt server routes. For unit testing, I used the official nuxt-test-utils library alongisde Vitest, as a test runner.
+For caching the API requests, I took advantage of the Nitro's built-in cache alongisde Nuxt server routes. For unit testing, I used the official nuxt-test-utils library alongside Vitest, as a test runner.
 
 
 ## Running the project
@@ -20,7 +20,7 @@ In order to run the project in your machine, follow the steps bellow:
 git clone https://github.com/thel3onardo/defsafe-code-challenge
 ```
 
-Run the docker container either with docker compose or just docker:
+Run the docker container either with docker compose:
 
 ### With docker compose
 ```bash
@@ -43,7 +43,7 @@ pnpm run test   // This will run the test suite.
 ```
 
 ```bash
-pnpm run dev    // Runs a development server inside the container
+pnpm run dev    // Runs a development server inside the container. Defaults to port 3001
 ```
 
 ## Feedbacks
