@@ -30,8 +30,10 @@ const { pending, error, refresh } = await useLazyFetch<APIResponse>(
         class="flex flex-col px-6 lg:px-4 lg:flex-row items-center gap-x-12 justify-between py-8 max-w-[1000px] w-full mx-auto"
       >
         <div v-if="error" class="flex flex-col gap-y-4">
-          <Heading as="h2" uppercase>Error</Heading>
-          <p class="text-primary-light">
+          <Heading data-testid="content-fail-title" as="h2" uppercase
+            >Error</Heading
+          >
+          <p data-testid="content-fail-text" class="text-primary-light">
             There was an internal error with the request. Please, reload the
             page.
           </p>
@@ -41,19 +43,24 @@ const { pending, error, refresh } = await useLazyFetch<APIResponse>(
           v-else
           class="flex flex-col text-center lg:text-start mb-8 lg:mb-0"
         >
-          <Heading as="h2" uppercase>cat fact:</Heading>
+          <Heading data-testid="content-success-title" as="h2" uppercase
+            >cat fact:</Heading
+          >
           <div
             class="my-10 text-primary-light font-medium text-base md:text-xl px-4 sm:px-8 md:px-12 lg:px-0"
           >
             <Transition mode="out-in">
-              <p v-if="pending">Loading new fact...</p>
-              <p v-else>
+              <p v-if="pending" data-testid="content-loading-text">
+                Loading new fact...
+              </p>
+              <p v-else data-testid="content-success-text">
                 {{ factsStore.current }}
               </p>
             </Transition>
           </div>
           <div class="flex justify-center lg:justify-start">
             <Button
+              data-testid="content-refetch-button"
               icon="ic:baseline-refresh"
               class="font-bold"
               @click="refresh"
