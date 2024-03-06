@@ -1,6 +1,6 @@
 # DefSafe Code Challenge
 
-![alt text](https://github.com/thel3onardo/defsafe-code-challenge/blob/main/public/readme-cover-2.png?raw=true)
+![Cover image](https://github.com/thel3onardo/defsafe-code-challenge/blob/main/public/readme-image.png?raw=true)
 
 Front-end code challenge built with Nuxt3, TailwindCSS and Vitest.
 
@@ -46,3 +46,6 @@ pnpm run test   // This will run the test suite.
 pnpm run dev    // Runs a development server inside the container
 ```
 
+## Feedbacks
+
+Did you find any problem in the project? or something that did not run as expected? Feel free to send me an email at **leonardo.contato03@gmail.com** or open a pull request!
