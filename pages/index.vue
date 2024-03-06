@@ -47,7 +47,7 @@ const { pending, error, refresh } = await useLazyFetch<APIResponse>(
             >cat fact:</Heading
           >
           <div
-            class="my-10 text-primary-light font-medium text-base md:text-xl px-4 sm:px-8 md:px-12 lg:px-0"
+            class="my-10 text-primary-light text-base md:text-xl px-4 sm:px-8 md:px-12 lg:px-0"
           >
             <Transition mode="out-in">
               <p v-if="pending" data-testid="content-loading-text">

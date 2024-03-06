@@ -9,7 +9,7 @@ withDefaults(defineProps<Props>(), { as: "h1", uppercase: false });
 <template>
   <component
     :is="as"
-    class="uppercase text-primary-dark text-2xl font-semibold"
+    class="uppercase text-primary-dark text-2xl font-medium"
     :class="{ uppercase: uppercase }"
   >
     <slot />

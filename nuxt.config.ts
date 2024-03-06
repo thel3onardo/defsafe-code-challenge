@@ -28,7 +28,7 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
-      Jost: true,
+      Jost: [400, 500, 600, 700],
     },
     prefetch: true,
     preload: true,
