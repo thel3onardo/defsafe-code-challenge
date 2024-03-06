@@ -1,6 +1,6 @@
 # DefSafe Code Challenge
 
-![Cover image](https://github.com/thel3onardo/defsafe-code-challenge/blob/main/public/readme-image.jpg?raw=true)
+![Cover image](https://github.com/thel3onardo/defsafe-code-challenge/blob/main/public/readme-image-2.jpg?raw=true)
 
 Front-end code challenge built with Nuxt3, TailwindCSS and Vitest.
 
