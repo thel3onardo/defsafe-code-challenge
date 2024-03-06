@@ -1,75 +1,48 @@
-# Nuxt 3 Minimal Starter
+# DefSafe Code Challenge
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+![alt text](https://github.com/thel3onardo/defsafe-code-challenge/blob/main/public/readme-cover.png?raw=true)
 
-## Setup
+Front-end code challenge built with Nuxt3, TailwindCSS and Vitest.
 
-Make sure to install the dependencies:
 
+## Goal
+The project's goal is to build a simple application that displays cat facts. It was requested the use of the public <a href="">Cats API</a>, <a href="">Nuxt</a> as a meta framework and <a href="">TailwindCSS</a> as a styling engine.
+
+For caching the API requests, I took advantage of the Nitro's built-in cache alongisde Nuxt server routes. For unit testing, I used the official nuxt-test-utils library alongisde Vitest, as a test runner.
+
+
+## Running the project
+
+In order to run the project in your machine, follow the steps bellow:
+
+### Clone the repo
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+git clone https://github.com/thel3onardo/defsafe-code-challenge
 ```
 
-## Development Server
+Run the docker container either with docker compose or just docker:
 
-Start the development server on `http://localhost:3000`:
-
+### With docker compose
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+docker-compose up -d
 ```
 
-## Production
+After building the docker image, a project preview can be accessed in port :3000 of your localhost.
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
+### Running test suite and commands
+In order to run the test suite, you need to access the docker's container bash terminal and execute the commands. 
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+docker exec -it defsafe_nuxt bash
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Once you are inside containers bash, you can execute pnpm commands, such as:
+
+```bash
+pnpm run test   // This will run the test suite.
+```
+
+```bash
+pnpm run dev    // Runs a development server inside the container
+```
+
