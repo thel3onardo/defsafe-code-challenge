@@ -20,7 +20,7 @@ const catImages = [
         class="h-full w-full object-cover"
         :src="image.imagePath"
         :alt="image.alt"
-        :quality="100"
+        :quality="80"
         placeholder
         preload
       />
